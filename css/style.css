@@ -1,0 +1,169 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2b3e50; /* Dark background */
+    color: #f5f5f5; /* Light text */
+}
+
+/* Header styles */
+.dashboard-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e4f61;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    text-align: center;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffcc33;
+}
+
+.header-title h2 {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+/* Content section styles */
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.dashboard-section {
+    background-color: #1c2a3b;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-section:hover {
+    transform: translateY(-5px);
+}
+
+.map, .chart {
+    width: 100%;
+    height: 400px;
+}
+
+.map-section {
+    grid-column: span 2;
+}
+
+/* Media Queries */
+
+/* Para pantallas grandes (1920px) */
+@media (min-width: 1920px) {
+    .logo-img {
+        width: 150px;
+    }
+
+    .header-title h1 {
+        font-size: 32px;
+    }
+
+    .header-title h2 {
+        font-size: 20px;
+    }
+}
+
+/* Para pantallas medianas (1280px) */
+@media (max-width: 1280px) {
+    .logo-img {
+        width: 120px;
+    }
+
+    .header-title h1 {
+        font-size: 28px;
+    }
+
+    .header-title h2 {
+        font-size: 18px;
+    }
+}
+
+/* Para pantallas tablet (768px) */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map-section {
+        grid-column: span 1;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    .header-title h2 {
+        font-size: 16px;
+    }
+}
+
+/* Para pantallas pequeñas (576px) */
+@media (max-width: 576px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header-title h1 {
+        font-size: 20px;
+    }
+
+    .header-title h2 {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas muy pequeñas (360px) */
+@media (max-width: 360px) {
+
+    .dashboard-content{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+        margin: 10px;
+          
+    }
+    .dashboard-header {
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+    .header-title h2 {
+        font-size: 12px;
+    }
+
+
+    .map, .chart {
+        height: 300px;
+    }
+}
